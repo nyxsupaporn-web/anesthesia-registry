@@ -1,0 +1,4 @@
+V5 — Style A: warm brown/cream pastel cartoon UI.
+Changed: styles.css only.
+Unchanged: index.html, app.js, config.js, schema.sql, banner-reference.jpg, README.md.
+Public demo: do not enter real patient data.
