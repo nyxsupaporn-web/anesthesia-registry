@@ -258,3 +258,90 @@ body:has(#form.active) footer{display:none}
 #form .v8-form-footer span{font-size:10px;margin:0 8px}
 @media(min-width:650px){#form .v8-hero{border-radius:0 0 30px 30px}#form form#patientForm{max-width:700px;margin:0 auto!important}#form .v8-form-card{padding:24px 24px 19px}#form .v8-toolbar{max-width:700px;margin:auto}}
 @media(max-width:370px){#form .v8-two-col{gap:8px}#form .v8-field .field-label-text{font-size:11px}#form .v8-inline-field{grid-template-columns:36% 1fr}#form .v8-unit-chips button{padding:6px 9px}}
+
+
+/* ===== V9: use user-supplied background on all pages ===== */
+body{
+  position:relative;
+  background:#f7eee5 url('all-pages-background-v9.jpg') center top / cover fixed no-repeat !important;
+  color:#4b352c;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:linear-gradient(180deg, rgba(255,250,245,0.32), rgba(255,250,245,0.18));
+  pointer-events:none;
+  z-index:-1;
+}
+body:has(#form.active),
+body:has(#records.active),
+body:has(#stats.active),
+body:has(#settings.active),
+body:has(#home.active){
+  background:#f7eee5 url('all-pages-background-v9.jpg') center top / cover fixed no-repeat !important;
+}
+.app{
+  position:relative;
+  z-index:1;
+  background:transparent !important;
+}
+main{background:transparent !important;}
+.hero-reference,
+.notice,
+.tabs,
+.panel,
+.recent-box,
+.filters,
+.settings-card,
+.warning,
+#form .v8-form-card,
+#form .v8-note,
+#form .v8-extras,
+#form .v8-bottom-actions .v8-ocr,
+#records .tablewrap,
+#stats .summary>div,
+#stats .stat-breakdown>div{
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.notice{
+  background:rgba(248,239,228,0.92) !important;
+}
+.tabs{
+  background:rgba(255,254,250,0.93) !important;
+}
+.panel,
+.recent-box,
+.settings-card{
+  background:rgba(255,250,246,0.84) !important;
+}
+.filters{background:rgba(255,247,239,0.9) !important;}
+.warning{background:rgba(255,243,222,0.9) !important;}
+#form.panel{
+  background:transparent !important;
+  box-shadow:none !important;
+}
+#form .v8-form-card{
+  background:rgba(255,253,251,0.9) !important;
+}
+#form .v8-hero{
+  box-shadow:0 10px 28px rgba(152,106,79,0.18) !important;
+}
+#records .tablewrap,
+#records table,
+#records td,
+#records th{
+  background-color:rgba(255,252,249,0.9);
+}
+#stats .summary>div,
+#stats .stat-breakdown>div{
+  background:rgba(255,247,240,0.9) !important;
+}
+#settings .settings-card{
+  background:rgba(255,247,240,0.88) !important;
+}
+footer{
+  background:rgba(255,249,243,0.45);
+  border-radius:14px 14px 0 0;
+}
