@@ -1,0 +1,1 @@
+V4 UI only: stronger banner contrast, pastel SVG nav and dashboard icons, equal height home filters, bottom safe-area and scroll spacing. app.js/config.js/schema.sql unchanged. Never use real patient data in demo.
